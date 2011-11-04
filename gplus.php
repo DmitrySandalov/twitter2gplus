@@ -1,8 +1,9 @@
 <?php
+
 /**
  * Google+ (plus.google.com) PHP Curl bot
  * @since Sep 29 2011
- * @version 1.0
+ * @version 3.0
  * @link http://360percents.com/
  * @author Luka Pušić <pusic93@gmail.com>
  */
@@ -47,7 +48,6 @@ logout(); //optional - log out
  * Parse the webpage and collect form data
  * @return array (string postdata, string postaction)
  */
-
 function login_data() {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_COOKIEJAR, $GLOBALS['cookies']);
@@ -85,7 +85,6 @@ function login_data() {
 /**
  * 2. POST login: https://accounts.google.com/ServiceLoginAuth
  */
-
 function login($postdata) {
 
     $ch = curl_init();
@@ -152,7 +151,6 @@ function update_status() {
  * 3. GET logout:
  * Just logout to look more human like and reset cookie :)
  */
-
 function logout() {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_COOKIEJAR, $GLOBALS['cookies']);
