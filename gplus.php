@@ -28,12 +28,13 @@ function tidy($str) {
 }
 
 /**
- * MAIN BLOCK
+ * Handle cookie file
  */
 @unlink($cookies); //delete previous cookie file if exists
 touch($cookies); //create a cookie file
 
 /**
+ * MAIN BLOCK
  * login_data() just collects login form info
  * login($postdata) logs you in and you can do pretty much anything you want from here on
  */
