@@ -1,4 +1,4 @@
-===Google Plus status update bot v1.0 ===
+=== Google Plus status update bot v1.0 ===
 
 Readme date: Nov 11 2011
 Contributors: lukapusic
