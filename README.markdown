@@ -17,6 +17,9 @@ OAuth, tokens or any other annoying products.
 == Instructions ==
 1. Open gplus.php and edit email and password
 2. run it
+```
+test
+```
 
 == Changelog ==
 Nov 11 2011
