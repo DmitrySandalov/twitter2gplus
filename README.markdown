@@ -1,9 +1,9 @@
 # Google Plus status update bot
 
-Readme date: Nov 16 2011
-Contributors: lukapusic
-Author: Luka Pusic <pusic93@gmail.com>
-URI: http://360percents.com/posts/first-google-google-plus-status-update-bot-in-php/
+* Readme date: Nov 16 2011
+* Contributors: lukapusic
+* Author: Luka Pusic <pusic93@gmail.com>
+* URI: http://360percents.com/posts/first-google-google-plus-status-update-bot-in-php/
 
 ## Description
 This bot can log into your Google account and update your Google Plus status,
@@ -30,9 +30,9 @@ Nov 16 2011
 * fails if you have mobile verification enabled
 
 ## License
-* ----------------------------------------------------------------------------
-* "THE BEER-WARE LICENSE" (Revision 42):
-* <pusic93@gmail.com> wrote this file. As long as you retain this notice you
-* can do whatever you want with this stuff. If we meet some day, and you think
-* this stuff is worth it, you can buy me a beer in return. Luka Pusic
-* ----------------------------------------------------------------------------
+ ----------------------------------------------------------------------------
+ "THE BEER-WARE LICENSE" (Revision 42):
+ <pusic93@gmail.com> wrote this file. As long as you retain this notice you
+ can do whatever you want with this stuff. If we meet some day, and you think
+ this stuff is worth it, you can buy me a beer in return. Luka Pusic
+ ----------------------------------------------------------------------------
