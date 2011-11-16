@@ -19,10 +19,10 @@ OAuth, tokens or any other annoying products.
 2. run it ```php gplus.php```
 
 ## Changelog
-_Nov 11 2011_
+### Nov 11 2011
 * added debug parameter, pageid parameter, pc_uagent parameter
 * page updating still not implemented
-_Nov 16 2011_
+### Nov 16 2011
 * changed the way baseurl is determined, google remove base href
 
 ## Known issues
