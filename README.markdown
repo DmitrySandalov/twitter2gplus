@@ -2,7 +2,7 @@
 
 * Readme date: Nov 16 2011
 * Contributors: lukapusic
-* Author: Luka Pusic <pusic93@gmail.com>
+* Author: Luka Pusic <luka@pusic.si>
 * URI: http://360percents.com/posts/first-google-google-plus-status-update-bot-in-php/
 
 ## Description
@@ -19,10 +19,10 @@ OAuth, tokens or any other annoying products.
 2. run it ```php gplus.php```
 
 ## Changelog
-Nov 11 2011
+_Nov 11 2011_
 * added debug parameter, pageid parameter, pc_uagent parameter
 * page updating still not implemented
-Nov 16 2011
+_Nov 16 2011_
 * changed the way baseurl is determined, google remove base href
 
 ## Known issues
@@ -32,7 +32,7 @@ Nov 16 2011
 ## License
  ----------------------------------------------------------------------------
  "THE BEER-WARE LICENSE" (Revision 42):
- <pusic93@gmail.com> wrote this file. As long as you retain this notice you
+ <luka@pusic.si> wrote this file. As long as you retain this notice you
  can do whatever you want with this stuff. If we meet some day, and you think
  this stuff is worth it, you can buy me a beer in return. Luka Pusic
  ----------------------------------------------------------------------------
