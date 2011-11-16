@@ -1,6 +1,6 @@
-# Google Plus status update bot v1.0
+# Google Plus status update bot
 
-Readme date: Nov 11 2011
+Readme date: Nov 16 2011
 Contributors: lukapusic
 Author: Luka Pusic <pusic93@gmail.com>
 URI: http://360percents.com/posts/first-google-google-plus-status-update-bot-in-php/
@@ -11,24 +11,23 @@ but you can extend it to other Google products. All this is done without Google 
 OAuth, tokens or any other annoying products.
 
 
-## System requirements ==
+## System requirements
 * PHP curl extension
 
 ## Instructions
 1. Open gplus.php and edit email and password
-2. run it
-```
-test
-```
+2. run it ```php gplus.php```
 
 ## Changelog
 Nov 11 2011
 * added debug parameter, pageid parameter, pc_uagent parameter
 * page updating still not implemented
+Nov 16 2011
+* changed the way baseurl is determined, google remove base href
 
 ## Known issues
 * fails if you didn't confirm mobile location terms and conditions
-* fails if you have phone confirmation enabled
+* fails if you have mobile verification enabled
 
 ## License
 * ----------------------------------------------------------------------------
