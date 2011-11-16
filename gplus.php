@@ -10,9 +10,9 @@
 /**
  * REQUIRED PARAMETERS
  */
-$status = 'test http://www.google.com/';
+$status = 'test http://360percents.com/';
 $email = 'email@email.com';
-$pass = 'password';
+$pass = 'passw0rd';
 
 /**
  * OPTIONAL PARAMETERS
@@ -24,7 +24,7 @@ $cookies = 'cookie.txt';
 $sleeptime = 0;
 $uagent = 'Mozilla/4.0 (compatible; MSIE 5.0; S60/3.0 NokiaN73-1/2.0(2.0617.0.0.7) Profile/MIDP-2.0 Configuration/CLDC-1.1)';
 $pc_uagent = 'Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1';
-$debug = FALSE;
+$debug = TRUE;
 
 function tidy($str) {
     return rtrim($str, "&");
@@ -127,6 +127,7 @@ function update_profile_status() {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     $buf = utf8_decode(html_entity_decode(str_replace('&', '', curl_exec($ch))));
+    $header = curl_getinfo($ch);
     curl_close($ch);
     if ($GLOBALS['debug']) {
 	echo $buf;
@@ -142,7 +143,8 @@ function update_profile_status() {
 	}
     }
     $params .= 'newcontent=' . urlencode($GLOBALS['status']);
-    $baseurl = $doc->getElementsByTagName('base')->item(0)->getAttribute('href');
+    //$baseurl = $doc->getElementsByTagName('base')->item(0)->getAttribute('href');
+    $baseurl = 'https://m.google.com' . parse_url($header['url'], PHP_URL_PATH);
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_COOKIEJAR, $GLOBALS['cookies']);
@@ -166,6 +168,7 @@ function update_profile_status() {
 
 /**
  * Not implemented yet!
+ * just ignore this function for now
  */
 function update_page_status() {
 
@@ -181,39 +184,6 @@ function update_page_status() {
     if ($GLOBALS['debug']) {
 	echo $buf;
     }
-    /**
-      $params = '';
-      $doc = new DOMDocument;
-      $doc->loadxml($buf);
-      $inputs = $doc->getElementsByTagName('input');
-      foreach ($inputs as $input) {
-      if (($input->getAttribute('name') != 'editcircles')) {
-      $params .= $input->getAttribute('name') . '=' . urlencode($input->getAttribute('value')) . '&';
-      }
-      }
-      $params .= 'newcontent=' . urlencode($GLOBALS['status']);
-      $baseurl = $doc->getElementsByTagName('base')->item(0)->getAttribute('href');
-
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_COOKIEJAR, $GLOBALS['cookies']);
-      curl_setopt($ch, CURLOPT_COOKIEFILE, $GLOBALS['cookies']);
-      curl_setopt($ch, CURLOPT_USERAGENT, $GLOBALS['uagent']);
-      curl_setopt($ch, CURLOPT_URL, $baseurl . '?v=compose&group=m1c&hideloc=1&a=post');
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-      curl_setopt($ch, CURLOPT_REFERER, $baseurl . '?v=compose&group=m1c&hideloc=1');
-      curl_setopt($ch, CURLOPT_POST, 1);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-      $buf = curl_exec($ch);
-      $header = curl_getinfo($ch);
-      curl_close($ch);
-      if ($GLOBALS['debug']) {
-      echo $buf;
-      }
-
-      echo "\n[+] POST Updating status on: " . $baseurl . "\n\n";
-     * 
-     */
 }
 
 /**
@@ -234,5 +204,5 @@ function logout() {
 	echo $buf;
     }
 }
-?>
 
+?>
