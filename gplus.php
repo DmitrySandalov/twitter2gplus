@@ -1,7 +1,18 @@
 <?php
+
+// Dmitry Sandalov
+// Twitter 2 Google Plus CrossPost PHP script
 // v0.2
 
-// Works only with 2-step auth turned off
+// Credits: 
+// Luka Pusic luka@pusic.si
+// Vladimir Smirnoff http://orl.sumy.ua mail@smirnoff.sumy.ua
+// Kichrum http://Kichrum.org.ua
+
+// (!) Works only with Google 2-step auth turned off
+// (!) The code needs refactoring/rewriting, works for me now.
+// (!) Needs 2 blank 600 files: vtweet.txt, cookie.txt
+
 // Required Parameters
 $email = 'your@mail.com'; // Your mail (works also with Google Apps accounts)
 $pass = 'PassHere'; // Your password
